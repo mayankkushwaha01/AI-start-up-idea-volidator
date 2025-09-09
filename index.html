@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 IdeaForge - AI Startup Oracle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-particles"></div>
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">🔮 IdeaForge</div>
+            <div class="nav-toggle" onclick="toggleNav()">☰</div>
+            <ul class="nav-menu">
+                <li><a href="#home">🏠 Home</a></li>
+                <li><a href="#oracle">🔮 Oracle</a></li>
+                <li><a href="#pulse">📊 Pulse</a></li>
+                <li><a href="#goldmine">💎 Goldmine</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✨ AI-Powered Oracle</div>
+            <h1 class="glitch" data-text="Forge Your Billion Dollar Idea">Forge Your Billion Dollar Idea</h1>
+            <p class="typewriter">Unleash the power of AI to decode market secrets, predict trends, and discover hidden goldmines before your competitors do.</p>
+            <div class="cta-container">
+                <button class="cta-btn pulse-btn" onclick="scrollToOracle()">🔮 Consult Oracle</button>
+                <button class="cta-btn-secondary" onclick="scrollToPulse()">📊 Market Pulse</button>
+            </div>
+            <div class="stats-row">
+                <div class="stat"><span class="stat-number">10K+</span><span class="stat-label">Ideas Validated</span></div>
+                <div class="stat"><span class="stat-number">$2.3B</span><span class="stat-label">Value Created</span></div>
+                <div class="stat"><span class="stat-number">94%</span><span class="stat-label">Success Rate</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oracle" class="oracle-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="neon-text">🔮 The Oracle Speaks</h2>
+                <p class="section-subtitle">Channel the wisdom of AI to unveil your idea's destiny</p>
+            </div>
+            <div class="oracle-form">
+                <div class="input-group">
+                    <label class="input-label">💭 Describe Your Vision</label>
+                    <textarea id="ideaInput" placeholder="Paint your startup dream in vivid detail..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label class="input-label">🏭 Industry Realm</label>
+                        <select id="industry" class="glass-select">
+                            <option value="">Choose Your Domain</option>
+                            <option value="fintech">💰 FinTech</option>
+                            <option value="healthtech">🏥 HealthTech</option>
+                            <option value="edtech">🎓 EdTech</option>
+                            <option value="ecommerce">🛒 E-commerce</option>
+                            <option value="saas">☁️ SaaS</option>
+                            <option value="ai">🤖 AI/ML</option>
+                        </select>
+                    </div>
+
+                </div>
+                <button id="validateBtn" class="oracle-btn" onclick="validateIdea()">
+                    <span class="btn-text">🔮 Consult Oracle</span>
+                    <div class="btn-particles"></div>
+                </button>
+            </div>
+            
+            <div id="validationResult" class="prophecy-container" style="display: none;">
+                <div class="prophecy-header">
+                    <h3 class="prophecy-title">🔮 The Oracle's Vision</h3>
+                </div>
+                <div class="vision-display">
+                    <div class="vision-header">
+                        <div class="vision-status" id="visionStatus">
+                            <div class="status-indicator"></div>
+                            <span>AI Analysis Complete</span>
+                        </div>
+                        <div class="confidence-badge" id="confidenceBadge">95% Confidence</div>
+                    </div>
+                    <div class="vision-content">
+                        <div class="executive-summary" id="executiveSummary"></div>
+                        <div class="detailed-analysis" id="detailedAnalysis"></div>
+                    </div>
+                </div>
+                <div class="destiny-metrics">
+                    <div class="metric-card">
+                        <div class="metric-icon">🌊</div>
+                        <div class="metric-label">Market Depth</div>
+                        <div class="metric-value" id="marketScore">0</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">⚔️</div>
+                        <div class="metric-label">Battle Intensity</div>
+                        <div class="metric-value" id="competitionScore">0</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💰</div>
+                        <div class="metric-label">Gold Potential</div>
+                        <div class="metric-value" id="profitScore">0</div>
+                    </div>
+                </div>
+                <div class="oracle-guidance">
+                    <h4>🌟 Sacred Guidance</h4>
+                    <div class="guidance-list" id="guidanceList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pulse" class="pulse-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="neon-text">📊 Market Pulse</h2>
+                <p class="section-subtitle">Feel the heartbeat of global markets</p>
+            </div>
+            <div class="pulse-grid">
+                <div class="pulse-card volcanic">
+                    <div class="card-icon">🌋</div>
+                    <h3>Volcanic Trends</h3>
+                    <div class="pulse-indicator hot"></div>
+                    <ul id="hotTrends"></ul>
+                </div>
+                <div class="pulse-card cosmic">
+                    <div class="card-icon">🌌</div>
+                    <h3>Cosmic Opportunities</h3>
+                    <div class="pulse-indicator emerging"></div>
+                    <ul id="emergingTrends"></ul>
+                </div>
+                <div class="pulse-card fading">
+                    <div class="card-icon">🌑</div>
+                    <h3>Fading Realms</h3>
+                    <div class="pulse-indicator declining"></div>
+                    <ul id="decliningTrends"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="goldmine" class="goldmine-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="neon-text">💎 Hidden Goldmines</h2>
+                <p class="section-subtitle">Unearth treasures others haven't discovered</p>
+            </div>
+            <div class="treasure-filters">
+                <button class="treasure-btn active" onclick="filterNiches('all')">🗺️ All Treasures</button>
+                <button class="treasure-btn" onclick="filterNiches('low-competition')">🏝️ Uncharted</button>
+                <button class="treasure-btn" onclick="filterNiches('high-growth')">🚀 Explosive</button>
+                <button class="treasure-btn" onclick="filterNiches('ai-ready')">🤖 AI-Native</button>
+            </div>
+            <div class="goldmine-grid" id="nichesGrid"></div>
+        </div>
+    </section>
+
+    <footer class="cosmic-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">🔮 IdeaForge</div>
+                    <p>Where dreams become billion-dollar realities</p>
+                </div>
+                <div class="footer-stats">
+                    <div class="footer-stat">
+                        <span class="stat-icon">⚡</span>
+                        <span>Powered by Quantum AI</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span class="stat-icon">🌟</span>
+                        <span>Trusted by Visionaries</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IdeaForge. Forge the future, one idea at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

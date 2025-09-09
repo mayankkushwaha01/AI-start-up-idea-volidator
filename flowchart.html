@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔮 IdeaForge - System Flowchart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .flow-step {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        .flow-step h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+        .arrow {
+            font-size: 2rem;
+            color: #4ecdc4;
+            margin: 1rem 0;
+        }
+        .parallel-steps {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .api-step {
+            border-left: 4px solid #ff6b6b;
+        }
+        .frontend-step {
+            border-left: 4px solid #4ecdc4;
+        }
+        .backend-step {
+            border-left: 4px solid #45b7d1;
+        }
+        @media (max-width: 768px) {
+            .parallel-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔮 IdeaForge System Architecture</h1>
+        
+        <div class="flowchart">
+            <!-- User Input -->
+            <div class="flow-step frontend-step">
+                <h3>👤 User Input</h3>
+                <p>User enters startup idea and selects industry through mystical interface</p>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <!-- Frontend Validation -->
+            <div class="flow-step frontend-step">
+                <h3>✅ Frontend Validation</h3>
+                <p>JavaScript validates input and shows loading animation</p>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <!-- Parallel Processing -->
+            <div class="parallel-steps">
+                <div class="flow-step api-step">
+                    <h3>🤖 AI API Call</h3>
+                    <p>Send request to Flask API<br>
+                    POST /api/prophecy<br>
+                    {idea, industry}</p>
+                </div>
+                
+                <div class="flow-step backend-step">
+                    <h3>📊 Local Analysis</h3>
+                    <p>JavaScript performs keyword analysis and scoring as fallback</p>
+                </div>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <!-- AI Processing -->
+            <div class="flow-step api-step">
+                <h3>🧠 LangChain + Gemini</h3>
+                <p>Flask API uses LangChain with Google Gemini to generate detailed 300+ word business analysis</p>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <!-- Response Processing -->
+            <div class="parallel-steps">
+                <div class="flow-step api-step">
+                    <h3>📝 AI Response</h3>
+                    <p>Detailed prophecy text returned from Gemini API</p>
+                </div>
+                
+                <div class="flow-step backend-step">
+                    <h3>📈 Metrics Calculation</h3>
+                    <p>Calculate market size, competition, and profitability scores</p>
+                </div>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <!-- Display Results -->
+            <div class="flow-step frontend-step">
+                <h3>🔮 Oracle Prophecy Display</h3>
+                <p>Show detailed analysis text, metric cards, and actionable recommendations with animations</p>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <!-- User Actions -->
+            <div class="flow-step frontend-step">
+                <h3>🚀 User Next Steps</h3>
+                <p>User receives comprehensive startup validation and implementation roadmap</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem; padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px;">
+            <h2 style="color: #4ecdc4; text-align: center;">🛠️ Technology Stack</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="text-align: center;">
+                    <h4 style="color: #ff6b6b;">Frontend</h4>
+                    <p>HTML5, CSS3, JavaScript<br>Glassmorphism Design<br>Responsive Layout</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #4ecdc4;">Backend API</h4>
+                    <p>Flask (Python)<br>LangChain Framework<br>Google Gemini AI</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #45b7d1;">Features</h4>
+                    <p>AI-Powered Analysis<br>Real-time Validation<br>Detailed Reporting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
