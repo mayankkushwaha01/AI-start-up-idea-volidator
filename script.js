@@ -146,7 +146,25 @@ const marketData = {
 document.addEventListener('DOMContentLoaded', function() {
     loadTrends();
     loadNiches();
+    initNavbarHide();
 });
+
+function initNavbarHide() {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.glass-nav');
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.classList.add('hidden');
+        } else {
+            navbar.classList.remove('hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+}
 
 function scrollToOracle() {
     document.getElementById('oracle').scrollIntoView({ behavior: 'smooth' });
