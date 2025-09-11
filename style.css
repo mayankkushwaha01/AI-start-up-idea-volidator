@@ -151,6 +151,7 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
+    margin-top: 20px;
     margin-bottom: 2rem;
     animation: pulse 2s infinite;
 }
@@ -1014,8 +1015,12 @@ body {
     opacity: 0.6;
 }
 
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
     .nav-toggle {
         display: block;
     }
@@ -1036,68 +1041,201 @@ body {
         display: flex;
     }
     
+    .hero {
+        padding: 0 15px;
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        margin-top: 10px;
+    }
+    
     .glitch {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
     
     .typewriter {
-        font-size: 1.1rem;
+        font-size: 1rem;
         white-space: normal;
         animation: none;
         border-right: none;
+        padding: 0 10px;
     }
     
     .cta-container {
         flex-direction: column;
+        gap: 0.8rem;
         align-items: center;
+        padding: 0 20px;
     }
     
-    .hero-features {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+    .cta-btn,
+    .cta-btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px 20px;
+        font-size: 1rem;
     }
     
-    .feature-item {
-        flex-direction: row;
-        width: 80%;
-        justify-content: center;
+    .oracle-section,
+    .pulse-section,
+    .goldmine-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+        padding: 0 15px;
+    }
+    
+    .neon-text {
+        font-size: 2rem;
+    }
+    
+    .oracle-form {
+        margin: 0 15px;
+        padding: 1.5rem;
+    }
+    
+    #ideaInput {
+        height: 100px;
+        font-size: 0.9rem;
     }
     
     .form-row {
         flex-direction: column;
     }
     
-    .destiny-metrics {
-        grid-template-columns: 1fr;
+    .oracle-btn {
+        padding: 15px;
+        font-size: 1rem;
     }
     
-    .pulse-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .goldmine-grid {
-        grid-template-columns: 1fr;
+    .prophecy-container {
+        margin: 0 15px;
+        padding: 1.5rem;
     }
     
     .vision-header {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding: 1rem;
     }
     
     .vision-content {
         padding: 1rem;
     }
     
+    .executive-summary {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .analysis-section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .destiny-metrics {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 0 15px;
+    }
+    
+    .metric-card {
+        padding: 1rem;
+    }
+    
+    .oracle-guidance {
+        margin: 0 15px;
+        padding: 1rem;
+    }
+    
+    .guidance-item {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .pulse-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 15px;
+    }
+    
+    .pulse-card {
+        padding: 1.5rem;
+    }
+    
+    .treasure-filters {
+        padding: 0 15px;
+        margin-bottom: 2rem;
+    }
+    
+    .treasure-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        margin: 0.2rem;
+    }
+    
+    .goldmine-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 15px;
+    }
+    
+    .niche-card {
+        padding: 1.5rem;
+    }
+    
+    .niche-stats {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
     .footer-content {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
+        padding: 0 15px;
     }
     
     .footer-stats {
         flex-direction: column;
         gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glitch {
+        font-size: 1.8rem;
+    }
+    
+    .typewriter {
+        font-size: 0.95rem;
+    }
+    
+    .neon-text {
+        font-size: 1.8rem;
+    }
+    
+    .oracle-form {
+        padding: 1rem;
+    }
+    
+    .prophecy-container {
+        padding: 1rem;
+    }
+    
+    .pulse-card,
+    .niche-card {
+        padding: 1rem;
     }
 }
